@@ -2,7 +2,7 @@
 
 # BEGIN
 def fibonacci(position)
-  if position < 0
+  if position.negative?
     nil
   elsif position < 2
     position
@@ -10,7 +10,7 @@ def fibonacci(position)
     list = [0, 1]
     current = 1
     while current != position
-      list << list[current] + list[current-1]
+      list << (list[current] + list[current - 1])
       current += 1
     end
     list[-1]
